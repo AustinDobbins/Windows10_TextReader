@@ -1,5 +1,6 @@
 import os 
 import time
+import pyperclip
 import speech_recognition as sr
 from gtts import gTTS
 from playsound import playsound
@@ -11,4 +12,4 @@ def speak(text):
 	tts.save(filename)
 	playsound('voice.mp3')
 
-speak("Hi, change the text on line fourteen to make me say something new") 
+speak(pyperclip.paste()) 
